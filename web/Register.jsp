@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form name="register" action="register.jsp" method="POST">
+        <form name="RegisterServlet" action="RegisterServlet" method="POST">
             <table border="0">
                 <tbody>
                     <tr>
