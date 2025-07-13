@@ -9,40 +9,49 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Register Page</title>
+        <link rel="stylesheet" type="text/css" href="CSS/Register.css">
     </head>
     <body>
+       
+    <div class="RC">
+        <h2>Student Registration</h2>
         <form name="RegisterServlet" action="RegisterServlet" method="POST">
-            <table border="0">
-                <tbody>
-                    <tr>
-                       <td>Enter Student_ID:</td>
-                       <td><input type="text" name="txtID" value="" size="50" /></td>
-                    </tr>
-                    <tr>
-                        <td>Enter Student Name:</td>
-                        <td><input type="text" name="txtName" value="" size="50" /></td>
-                    </tr>
-                    <tr>
-                        <td>Enter Student Surname</td>
-                        <td><input type="text" name="txtSurname" value="" size="50" /></td>
-                    </tr>
-                    <tr>
-                        <td>Enter Phone number:</td>
-                        <td><input type="text" name="txtPhone" value="" size="50" /></td>
-                    </tr>
-                    <tr>
-                        <td>Enter Email:</td>
-                        <td><input type="text" name="txtEmail" value="" size="50" /></td>
-                    </tr>
-                    <tr>
-                        <td>Enter Password:</td>
-                        <td><input type="password" name="txtPassword" value="" size="50" /></td>
-                    </tr>
-                </tbody>
-            </table>
-            <input type="submit" value="Register" name="btnRegister" />
-            <input type="reset" value="Clear" name="btnClear" />
+            <div class="form-group">
+                <label for="txtID">Student ID:</label>
+                <input type="text" id="txtID" name="txtID" required>
+            </div>
+
+            <div class="form-group">
+                <label for="txtName">Name:</label>
+                <input type="text" id="txtName" name="txtName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="txtSurname">Surname:</label>
+                <input type="text" id="txtSurname" name="txtSurname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="txtPhone">Phone Number:</label>
+                <input type="text" name="txtPhone" pattern="\d{10}" title="Enter 10-digit number" required />
+            </div>
+
+            <div class="form-group">
+                <label for="txtEmail">Email:</label>
+                <input type="email" id="txtEmail" name="txtEmail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address like example@domain.com">
+            </div>
+
+            <div class="form-group">
+                <label for="txtPassword">Password:</label>
+                <input type="password" id="txtPassword" name="txtPassword" required>
+            </div>
+
+            <div class="form-actions">
+                <input type="submit" value="Register" name="btnRegister">
+                <input type="reset" value="Clear" name="btnClear">
+            </div>
         </form>
+    </div>
     </body>
 </html>
