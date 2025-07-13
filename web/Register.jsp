@@ -16,42 +16,53 @@
        
     <div class="RC">
         <h2>Student Registration</h2>
-        <form name="RegisterServlet" action="RegisterServlet" method="POST">
+        <form id="RF" name="RegisterServlet" action="RegisterServlet" method="POST" novalidate>
             <div class="form-group">
-                <label for="txtID">Student ID:</label>
-                <input type="text" id="txtID" name="txtID" required>
+                <input type="text" id="txtID" name="txtID" placeholder="StudentID" required>
             </div>
 
             <div class="form-group">
-                <label for="txtName">Name:</label>
-                <input type="text" id="txtName" name="txtName" required>
+                <input type="text" id="txtName" name="txtName" placeholder="Name" required>
             </div>
 
             <div class="form-group">
-                <label for="txtSurname">Surname:</label>
-                <input type="text" id="txtSurname" name="txtSurname" required>
+                <input type="text" id="txtSurname" name="txtSurname" placeholder="Surname" required>
             </div>
 
             <div class="form-group">
-                <label for="txtPhone">Phone Number:</label>
-                <input type="text" name="txtPhone" pattern="\d{10}" title="Enter 10-digit number" required />
+                <input type="text" name="txtPhone" pattern="0[0-9]{9}" title="Phone number must start with 0 and be 10 digits long" placeholder="Phonenumber" required />
             </div>
 
             <div class="form-group">
-                <label for="txtEmail">Email:</label>
-                <input type="email" id="txtEmail" name="txtEmail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address like example@domain.com">
+                <input type="email" id="txtEmail" name="txtEmail" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address like example@domain.com">
             </div>
 
             <div class="form-group">
-                <label for="txtPassword">Password:</label>
-                <input type="password" id="txtPassword" name="txtPassword" required>
+                <input type="password" id="txtPassword" name="txtPassword" placeholder="Password" required>
             </div>
 
             <div class="form-actions">
                 <input type="submit" value="Register" name="btnRegister">
                 <input type="reset" value="Clear" name="btnClear">
             </div>
+            
+            <div class="form-footer">
+    Already have a login account?
+    <a href="login.jsp">Proceed to login</a>.
+</div>
         </form>
     </div>
+        <script>
+    // Only adds red borders AFTER submit button is pressed
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("RF");
+        form.addEventListener("submit", function (e) {
+            if (!form.checkValidity()) {
+                e.preventDefault(); // Cancel submit
+                form.classList.add("was-validated"); // Trigger CSS styles
+            }
+        });
+    });
+</script>
     </body>
 </html>

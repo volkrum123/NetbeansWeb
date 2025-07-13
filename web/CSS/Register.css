@@ -3,10 +3,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
 */
 body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #74ebd5, #ACB6E5);
-            margin: 0;
-            padding: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #ffffff, #cce7ff); /* white to light blue */
+    color: #333;
         }
         .container {
             width: 80%;
@@ -35,56 +36,113 @@ body {
             background-color: #d32f2f;
         }
   
-    .RC {
-    background-color: #fff;
-    max-width: 500px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+   .RC {
+    background-color: #ffffff;
+    max-width: 550px;
+    margin: 80px auto;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-h2 {
+/* Heading */
+.RC h2 {
     text-align: center;
+    margin-bottom: 30px;
+    color: #0066cc; /* Stronger blue for heading */
+    font-size: 1.8rem;
+}
+
+/* Form group spacing */
+.form-group {
     margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.form-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #333;
 }
 
-label {
-    display: block;
+.form-footer a {
+    color: #3399ff;
+    text-decoration: none;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-left: 5px;
 }
 
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Input fields */
 input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 8px;
     box-sizing: border-box;
+    padding: 12px 16px;
+    background-color: #f0f0f0;       /* light grey background */
+    border: 2px solid #add8e6;       /* light blue border */
+    border-radius: 30px;             /* rounded edges */
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+/* Placeholder color */
+input::placeholder {
+    color: #888;
+}
+
+/* Focus effect */
+input:focus {
+    border-color: #3399ff;
+    box-shadow: 0 0 8px rgba(51, 153, 255, 0.4);
+}
+
+/* Submit and Reset buttons */
 .form-actions {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 input[type="submit"],
 input[type="reset"] {
-    padding: 10px 20px;
+    flex: 1;
+    padding: 12px;
     font-weight: bold;
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
-    background-color: #4285f4;
+    border-radius: 30px;
+    background-color: #3399ff;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-input[type="reset"] {
-    background-color: #888;
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #1d7ed6;
+    box-shadow: 0 0 10px rgba(51, 153, 255, 0.5);
 }
 
+/* Validation feedback */
+form.was-validated input[type="text"]:invalid,
+form.was-validated input[type="email"]:invalid,
+form.was-validated input[type="password"]:invalid {
+    border-color: red;
+    background-color: #fff0f0;
+}
 
+form.was-validated input[type="text"]:valid,
+form.was-validated input[type="email"]:valid,
+form.was-validated input[type="password"]:valid {
+    border-color: limegreen;
+    background-color: #f0fff0;
+}
