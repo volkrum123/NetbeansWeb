@@ -2,7 +2,6 @@
 "session.getAttribute()" and "response.sendRedirect()"-->
 <%@ page import="jakarta.servlet.http.*,jakarta.servlet.*" %>
 
-
 <!--Ensures session tracking is enabled, 
 "String studentName = (String)" depends on a valid session object -->
 <%@ page session="true" %>
