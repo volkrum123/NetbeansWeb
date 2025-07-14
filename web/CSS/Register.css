@@ -25,7 +25,7 @@ body {
     text-align: center;
     margin-bottom: 30px;
     color: #0066cc; /* Stronger blue for heading */
-    font-size: 1.8rem;
+    font-size: 28.8px;
 }
 
 /* Form group spacing */
@@ -36,7 +36,7 @@ body {
 .form-footer {
     margin-top: 25px;
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 15.2px;
     color: #333;
 }
 
@@ -58,7 +58,7 @@ body {
     background-color: #f0f0f0;       /* light grey background */
     border: 2px solid #add8e6;       /* light blue border */
     border-radius: 30px;             /* rounded edges */
-    font-size: 1rem;
+    font-size: 16px;
     color: #333;
     outline: none;
     transition: border-color 0.3s, box-shadow 0.3s;
@@ -82,23 +82,19 @@ input:focus {
     gap: 15px;
     margin-top: 20px;
 }
-
-input[type="submit"],
-input[type="reset"] {
+#btn{
     flex: 1;
     padding: 12px;
-    font-weight: bold;
-    font-size: 1rem;
+    font: bold 16px sans-serif;
     border: none;
     border-radius: 30px;
-    background-color: #3399ff;
+    background-color: #39f;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover {
+#btn:hover{
     background-color: #1d7ed6;
     box-shadow: 0 0 10px rgba(51, 153, 255, 0.5);
 }

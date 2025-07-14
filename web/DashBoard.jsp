@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="registerCss.css">
+    <link rel="stylesheet" type="text/css" href="DashBoard.css">
 </head>
 <body>
     //Class was used for CSS purposes

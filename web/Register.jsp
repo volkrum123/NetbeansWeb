@@ -42,8 +42,8 @@
             </div>
 
             <div class="form-actions">
-                <input type="submit" value="Register" name="btnRegister">
-                <input type="reset" value="Clear" name="btnClear">
+                <input type="submit" id="btn" value="Register" name="btnRegister">
+                <input type="reset" id="btn" value="Clear" name="btnClear">
             </div>
             
             <div class="form-footer">
