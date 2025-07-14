@@ -24,15 +24,69 @@
     <link rel="stylesheet" type="text/css" href="DashBoard.css">
 </head>
 <body>
-    //Class was used for CSS purposes
     <div class="container">
-        
-        //Welcoming user and displaying name saved in Session
         <h1>Welcome to our Wellness Services, <%= studentName %>!</h1>
-        
-        //Form and post where used for a more secure Logout
+    <hr>
+        <h2>Student Information:</h2>
+        <div>
+            <div>
+                <p>Name: <%= studentName %></p>
+                <p>Surname: <%= studentSurname %></p>
+                <p>Student ID: <%= studentid %></p>       
+            </div>
+        </div>
+<hr>
+        <div class="section">
+            <h2>Scheduled Appointments</h2>
+            <p>Dr. Johan Smith - Counselor</p>
+            <div>
+                <button class="btn">Reschedule</button>
+                <button class="btn">Cancel</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Wellness Metrics</h2>
+            <div>
+                <span>Happy</span>
+                <div class="progress-container"><div class="progress" style="width: 85%;"></div></div>
+            </div>
+            <div>
+                <span>Stress</span>
+                <div class="progress-container"><div class="progress" style="width: 35%;"></div></div>
+            </div>
+            <div>
+                <span>Anxiety</span>
+                <div class="progress-container"><div class="progress" style="width: 45%;"></div></div>
+            </div>
+            <div>
+                <span>Self-Care</span>
+                <div class="progress-container"><div class="progress" style="width: 65%;"></div></div>
+            </div>
+        </div>
+
+       
+        <div class="section">
+            <h2>Schedule a Session</h2>
+            <button class="btn primary-btn">Book Now</button>
+        </div>
+
+    
+        <div class="section">
+            <h2>Emergency Contacts</h2>
+            <p>
+            Contact support at <a href="mailto:support@Wellness.edu">support@Wellness.edu</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Urgent Assistance</h2>
+            <button class="btn emergency-btn">Get Help</button>
+        </div>
+
+  <hr>
         <form action="LogoutServlet" method="post">
-            <button type="submit" class="logout-button">Logout</button>
+            <button type="submit" class="logout-button">Log Out</button>
         </form>
     </div>
 </body>
