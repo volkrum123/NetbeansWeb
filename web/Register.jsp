@@ -18,27 +18,27 @@
         <h2>Student Registration</h2>
         <form id="RF" name="RegisterServlet" action="RegisterServlet" method="POST" novalidate>
             <div class="form-group">
-                <input type="text" id="txtID" name="txtID" placeholder="StudentID" required>
+                <input type="text" id="IN" name="txtID" placeholder="StudentID" required>
             </div>
 
             <div class="form-group">
-                <input type="text" id="txtName" name="txtName" placeholder="Name" required>
+                <input type="text" id="IN" name="txtName" placeholder="Name" required>
             </div>
 
             <div class="form-group">
-                <input type="text" id="txtSurname" name="txtSurname" placeholder="Surname" required>
+                <input type="text" id="IN" name="txtSurname" placeholder="Surname" required>
             </div>
 
             <div class="form-group">
-                <input type="text" name="txtPhone" pattern="0[0-9]{9}" title="Phone number must start with 0 and be 10 digits long" placeholder="Phonenumber" required />
+                <input type="text" id="IN" name="txtPhone" pattern="0[0-9]{9}" title="Phone number must start with 0 and be 10 digits long" placeholder="Phonenumber" required />
             </div>
 
             <div class="form-group">
-                <input type="email" id="txtEmail" name="txtEmail" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address like example@domain.com">
+                <input type="email" id="IN" name="txtEmail" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address like example@domain.com">
             </div>
 
             <div class="form-group">
-                <input type="password" id="txtPassword" name="txtPassword" placeholder="Password" required>
+                <input type="password" id="IN" name="txtPassword" placeholder="Password" required>
             </div>
 
             <div class="form-actions">
