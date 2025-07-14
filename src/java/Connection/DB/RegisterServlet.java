@@ -29,6 +29,7 @@ public class RegisterServlet extends HttpServlet {
             conn = provider.getCon();
             provider.add(id, name, surname, phone, email, password);
             
+            response.sendRedirect("SuccessfulRegistration.jsp");
         } 
         catch (Exception e) 
         {
