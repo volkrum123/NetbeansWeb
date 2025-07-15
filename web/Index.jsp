@@ -9,7 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Index Page</title>
+        <link rel="stylesheet" type="text/css" href="CSS/index.css">
     </head>
     <body class="flex flex-col min-h-screen">
     <!-- Header Section -->
@@ -28,7 +29,7 @@
     <!-- Main Content Section -->
     <main class="main-content">
         <!-- Image Section -->
-        <img src="image.jpeg" alt="Students engaging in wellness activities" class="main-image">
+        <img src="LOGO/image.jpeg" alt="Students engaging in wellness activities" class="main-image">
 
         <!-- Content Card Section -->
         <div class="content-card">
