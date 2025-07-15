@@ -9,6 +9,8 @@ import java.sql.Connection;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 @WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
@@ -29,11 +31,12 @@ public class RegisterServlet extends HttpServlet {
             conn = provider.getCon();
             provider.add(id, name, surname, phone, email, password);
             
-            response.sendRedirect("SuccessfulRegistration.jsp");
+            response.sendRedirect("SuccessfulRegistration.jsp");    
         } 
         catch (Exception e) 
         {
             e.printStackTrace();
+              
         }
     }
 }

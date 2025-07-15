@@ -24,7 +24,7 @@
           <h1>Successful Registration!</h1>
           <p class="welcome-message">Welcome to Belgium Campus's wellness services – we're excited to have you onboard!</p>
           <p>Your submission has been received.</p>
-          <a href="login.jsp" class="back-button">Proceed to Login</a>
+          <a href="Login.jsp" class="back-button">Proceed to Login</a>
 </div>
     </body>
 </html>
