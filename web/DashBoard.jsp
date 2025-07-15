@@ -7,10 +7,16 @@
 <%@ page session="true" %>
 
 <!--Gets the value "studentName" form current session-->
-<%String studentName = (String) session.getAttribute("studentName");
+<% int student_id = (Integer) session.getAttribute("student_id");
+   String student_name = (String) session.getAttribute("student_name");
+   String student_surname = (String) session.getAttribute("student_surname");
+   String phone = (String) session.getAttribute("phone");
+   String email = (String) session.getAttribute("email");
+   String password = (String) session.getAttribute("password");
+   
     
     //User gets loged out if "studentName" is null(not found)
-    if (studentName == null) {
+    if (student_name == null) {
     // Redirects to login page
         response.sendRedirect("login.jsp");
         return;
@@ -21,18 +27,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="DashBoard.css">
+    <link rel="stylesheet" type="text/css" href="CSS/DashBoard.css">
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to our Wellness Services, <%= studentName %>!</h1>
+        <h1>Welcome to our Wellness Services, <%= student_name %>!</h1>
     <hr>
         <h2>Student Information:</h2>
         <div>
             <div>
-                <p>Name: <%= studentName %></p>
-                <p>Surname: <%= studentSurname %></p>
-                <p>Student ID: <%= studentid %></p>       
+                <p>Student: <%= student_name +" "+ student_surname %></p>
+                <p> Student email: <%= email %></p>
+                <p>Student ID: <%= student_id %></p>       
             </div>
         </div>
 <hr>
@@ -85,7 +91,7 @@
         </div>
 
   <hr>
-        <form action="LogoutServlet" method="post">
+        <form action="Index.jsp" method="post">
             <button type="submit" class="logout-button">Log Out</button>
         </form>
     </div>

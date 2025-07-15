@@ -16,7 +16,7 @@
        
     <div class="RC">
         <h2>Student Registration</h2>
-        <--<!-- This is a form -->
+        <!-- This is a form -->
         <form id="RF" name="RegisterServlet" action="RegisterServlet" method="POST" novalidate>
             <div class="form-group">
                 <input type="text" id="IN" name="txtID" placeholder="StudentID" required>

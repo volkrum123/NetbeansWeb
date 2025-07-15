@@ -42,7 +42,12 @@ public class LoginServlet extends HttpServlet
            rs = stmt.executeQuery();
            if(rs.next()){
                HttpSession session = request.getSession();
-               session.setAttribute("email", email);
+               session.setAttribute("student_id", Integer.valueOf(rs.getInt("student_id")));
+               session.setAttribute("student_name",rs.getString("student_name"));
+               session.setAttribute("student_surname",rs.getString("student_surname"));
+               session.setAttribute("phone",rs.getString("phone"));
+               session.setAttribute("email",rs.getString("email"));
+               session.setAttribute("password",rs.getString("password"));
                response.sendRedirect("DashBoard.jsp");
            }
            else{
