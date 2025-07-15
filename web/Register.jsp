@@ -49,7 +49,7 @@
             
             <div class="form-footer">
     Already have a login account?
-    <a href="login.jsp">Proceed to login</a>.
+    <a href="Login.jsp">Proceed to login</a>.
 </div>
         </form>
     </div>
