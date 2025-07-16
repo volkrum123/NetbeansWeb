@@ -34,7 +34,7 @@ body {
 }
 
 .form-footer {
-    margin-top: 25px;
+    margin-top: 20px;
     text-align: center;
     font-size: 15.2px;
     color: #333;
@@ -44,7 +44,7 @@ body {
     color: #3399ff;
     text-decoration: none;
     font-weight: bold;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .form-footer a:hover {

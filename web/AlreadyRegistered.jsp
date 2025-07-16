@@ -19,9 +19,9 @@
                <span>&#129300;</span>
              </div>
           </div>
-          <h1>Successful Registration!</h1>
-          <p class="welcome-message">Welcome to Belgium Campus's wellness services – we're excited to have you onboard!</p>
-          <p>Your submission has been received.</p>
+          <h1>Student profile already Exists!</h1>
+          <p class="welcome-message">Dear students, you already have a profile associated with Belgium Campus's wellness services.</p>
+          <p>Log-in to proceed to the DashBoard!</p>
           <a href="Login.jsp" class="back-button">Proceed to Login</a>
 </div>
     </body>

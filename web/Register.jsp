@@ -48,9 +48,9 @@
             </div>
             
             <div class="form-footer">
-    Already have a login account?
-    <a href="Login.jsp">Proceed to login</a>.
-</div>
+                <p>Already have a login account? <a href="Login.jsp">Proceed to Login.</a></p>
+                <p> Would you like to return to<a href="Index.jsp">Home.</a><p>
+            </div>
         </form>
     </div>
         <script>

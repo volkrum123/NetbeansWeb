@@ -28,11 +28,10 @@
                 <div class="form-actions">
                     <input type="submit" id="btn" value="Login" name="btnLogin">
                 </div>
-
                 <div class="form-footer">
-                    Don't have an account?
-                    <a href="Register.jsp">Register</a>.
-                </div>
+                <p>Don't have an account?<a href="Register.jsp">Proceed to Register.</a></p>
+                <p> Would you like to return to<a href="Index.jsp">Home.</a><p>
+            </div>
             </form>
         </div>
     </body>
