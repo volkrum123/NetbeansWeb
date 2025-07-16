@@ -13,6 +13,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 import java.nio.charset.StandardCharsets;
+import org.mindrot.jbcrypt.BCrypt;
 public class ConnectionProvider {
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "Volkrum@123";
@@ -39,9 +40,9 @@ public class ConnectionProvider {
     }
     
     public static String Hash(String password)throws NoSuchAlgorithmException{
-        MessageDigest md = MessageDigest.getInstance("SHA-256");
-        byte[] hash = md.digest(password.getBytes(StandardCharsets.UTF_8));
-        return Base64.getEncoder().encodeToString(hash);
+       
+       String hashed = BCrypt.hashpw(password,BCrypt.gensalt());
+       return hashed;
     }
     public void add(String id, String name, String surname, String phone, String email, String password) throws ClassNotFoundException{
         Connection conn;

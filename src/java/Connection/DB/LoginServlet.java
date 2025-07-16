@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
+import org.mindrot.jbcrypt.BCrypt;
 
 
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
@@ -34,21 +35,26 @@ public class LoginServlet extends HttpServlet
            ConnectionProvider provider = new ConnectionProvider();
            conn = provider.getCon();
            
-           String sql = "SELECT * FROM students WHERE email = ? AND password = ?";
+           String sql = "SELECT * FROM students WHERE email = ?";
            PreparedStatement stmt = conn.prepareStatement(sql);
            stmt.setString(1, email);
-           stmt.setString(2, password);
            
            rs = stmt.executeQuery();
            if(rs.next()){
-               HttpSession session = request.getSession();
+               
+               String hash = rs.getString("password");
+               
+               if(BCrypt.checkpw(password,hash)){
+                   HttpSession session = request.getSession();
                session.setAttribute("student_id", Integer.valueOf(rs.getInt("student_id")));
                session.setAttribute("student_name",rs.getString("student_name"));
                session.setAttribute("student_surname",rs.getString("student_surname"));
                session.setAttribute("phone",rs.getString("phone"));
                session.setAttribute("email",rs.getString("email"));
-               session.setAttribute("password",rs.getString("password"));
                response.sendRedirect("DashBoard.jsp");
+               }else{
+                   response.sendRedirect("LoginError.jsp");
+               }
            }
            else{
                response.sendRedirect("LoginError.jsp");

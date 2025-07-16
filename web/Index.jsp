@@ -20,8 +20,8 @@
                 Student Wellness Service
             </h1>
             <nav>
-                <a href="login.jsp" class="nav-link">Login</a>
-                <a href="register.jsp" class="nav-link">Register</a>
+                <a href="Login.jsp" class="nav-link">Login</a>
+                <a href="Register.jsp" class="nav-link">Register</a>
             </nav>
         </div>
     </header>
