@@ -24,6 +24,7 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("txtEmail");
         String password = request.getParameter("txtPassword");
         
+        
         Connection conn = null;
         ResultSet rs = null;
         try 
@@ -47,7 +48,8 @@ public class RegisterServlet extends HttpServlet {
                response.sendRedirect("AlreadyRegistered.jsp");
            }
            else{
-            provider.add(id, name, surname, phone, email, password);
+            String hash = provider.Hash(password);
+            provider.add(id, name, surname, phone, email, hash);
             response.sendRedirect("SuccessfulRegistration.jsp");
            }   
         } 

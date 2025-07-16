@@ -9,6 +9,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
+import java.nio.charset.StandardCharsets;
 public class ConnectionProvider {
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "Volkrum@123";
@@ -34,6 +38,11 @@ public class ConnectionProvider {
         return con;
     }
     
+    public static String Hash(String password)throws NoSuchAlgorithmException{
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        byte[] hash = md.digest(password.getBytes(StandardCharsets.UTF_8));
+        return Base64.getEncoder().encodeToString(hash);
+    }
     public void add(String id, String name, String surname, String phone, String email, String password) throws ClassNotFoundException{
         Connection conn;
         PreparedStatement pst;
