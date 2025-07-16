@@ -9,9 +9,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>AR Page</title>
+         <link rel="stylesheet" type="text/css" href="CSS/AR.css">
     </head>
     <body>
-        <h1>Hello World!</h1>
+       <div class="container">
+          <div class="checkmark-wrapper">
+             <div class="checkmark">
+               <span>&#129300;</span>
+             </div>
+          </div>
+          <h1>Successful Registration!</h1>
+          <p class="welcome-message">Welcome to Belgium Campus's wellness services – we're excited to have you onboard!</p>
+          <p>Your submission has been received.</p>
+          <a href="Login.jsp" class="back-button">Proceed to Login</a>
+</div>
     </body>
 </html>

@@ -25,13 +25,31 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("txtPassword");
         
         Connection conn = null;
+        ResultSet rs = null;
         try 
         {
             ConnectionProvider provider = new ConnectionProvider();
             conn = provider.getCon();
-            provider.add(id, name, surname, phone, email, password);
             
-            response.sendRedirect("SuccessfulRegistration.jsp");    
+           String sql = "SELECT * FROM students WHERE student_id = ? AND email = ?";
+           PreparedStatement stmt = conn.prepareStatement(sql);
+           stmt.setInt(1, Integer.parseInt(id));
+           stmt.setString(2, email);
+           rs = stmt.executeQuery();
+           if(rs.next()){
+               HttpSession session = request.getSession();
+               session.setAttribute("student_id", Integer.valueOf(rs.getInt("student_id")));
+               session.setAttribute("student_name",rs.getString("student_name"));
+               session.setAttribute("student_surname",rs.getString("student_surname"));
+               session.setAttribute("phone",rs.getString("phone"));
+               session.setAttribute("email",rs.getString("email"));
+               session.setAttribute("password",rs.getString("password"));
+               response.sendRedirect("AlreadyRegistered.jsp");
+           }
+           else{
+            provider.add(id, name, surname, phone, email, password);
+            response.sendRedirect("SuccessfulRegistration.jsp");
+           }   
         } 
         catch (Exception e) 
         {
