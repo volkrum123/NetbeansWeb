@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/DashBoard.css">
 </head>
 <body>
+    // Welcomes student to dashboard.
     <div class="container">
         <h1>Welcome to our Wellness Services, <%= student_name %>!</h1>
     <hr>
@@ -42,6 +43,7 @@
             </div>
         </div>
 <hr>
+        //Allows student to Reschedule appointments and cancel them.
         <div class="section">
             <h2>Scheduled Appointments</h2>
             <p>Dr. Johan Smith - Counselor</p>
@@ -50,7 +52,7 @@
                 <button class="btn">Cancel</button>
             </div>
         </div>
-
+        // Displays user Wellness Data
         <div class="section">
             <h2>Wellness Metrics</h2>
             <div>
@@ -71,13 +73,13 @@
             </div>
         </div>
 
-       
+       //Allows student to schedule appointment
         <div class="section">
             <h2>Schedule a Session</h2>
             <button class="btn primary-btn">Book Now</button>
         </div>
 
-    
+       //Allows student to get Help
         <div class="section">
             <h2>Emergency Contacts</h2>
             <p>
@@ -85,12 +87,14 @@
             </p>
         </div>
 
+            //Allows student to Urgent Assistance
         <div class="section">
             <h2>Urgent Assistance</h2>
             <button class="btn emergency-btn">Get Help</button>
         </div>
 
   <hr>
+        // Log out button to invalidate session
         <form action="Index.jsp" method="post">
             <button type="submit" class="logout-button">Log Out</button>
         </form>

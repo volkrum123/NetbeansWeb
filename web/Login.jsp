@@ -34,5 +34,16 @@
             </div>
             </form>
         </div>
+        <script>
+    // Only adds red borders AFTER submit button is pressed
+    document.addEventListener("DOMContentLoaded", function () {
+        const form2 = document.getElementById("LF");
+        form2.addEventListener("submit", function (e) {
+            if (!form2.checkValidity()) {
+                e.preventDefault(); // Cancel submit
+                form2.classList.add("was-validated"); // Trigger CSS styles
+            }
+        });
+    });
     </body>
 </html>

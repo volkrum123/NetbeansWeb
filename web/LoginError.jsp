@@ -9,13 +9,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>LoginError Page</title>
+        <link rel="stylesheet" type="text/css" href="CSS/AR.css">
     </head>
     <body>
         <div class="container">
-        <h2>Login Failed</h2>
-        <p>Incorrect email or password.</p>
-        <p><a href="Login.jsp">Try again</a></p>
-       </div>
+          <div class="checkmark-wrapper">
+             <div class="checkmark">
+               <span>&#10008;;</span>
+             </div>
+          </div>
+          <h1>Student login failed!</h1>
+          <p class="welcome-message">Dear students, you incorrectly entered your login details.</p>
+          <p>Please re-enter your Email and password!</p>
+          <a href="Login.jsp" class="back-button">Proceed to Login</a>
+</div>
     </body>
 </html>

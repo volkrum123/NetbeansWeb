@@ -1,15 +1,20 @@
 /*
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
 */
-body {
+/* 
+    Created on : 17 Jul 2025, 17:45:12
+    Author     : MagotsoMaseko
+*/
+
+body{
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to bottom right, #ffffff, #cce7ff); /* white to light blue */
     color: #333;
-        }
- 
+}
+
    .RC {
     background-color: #ffffff;
     max-width: 550px;
@@ -20,7 +25,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Heading */
 .RC h2 {
     text-align: center;
     margin-bottom: 30px;
@@ -28,29 +32,17 @@ body {
     font-size: 28.8px;
 }
 
-/* Form group spacing */
 .form-group {
     margin-bottom: 20px;
-}
-
-.form-footer {
-    margin-top: 20px;
+}.form-footer {
+    margin-top: 25px;
     text-align: center;
     font-size: 15.2px;
     color: #333;
 }
-
-.form-footer a {
-    color: #3399ff;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 10px;
-}
-
 .form-footer a:hover {
     text-decoration: underline;
 }
-
 #IN{
     width: 100%;
     box-sizing: border-box;
@@ -99,12 +91,3 @@ input:focus {
     box-shadow: 0 0 10px rgba(51, 153, 255, 0.5);
 }
 
-form.was-validated #IN:invalid{
-     border-color: red;
-    background-color: #fff0f0;
-}
-
-form.was-validated #IN:valid{
-    border-color: limegreen;
-    background-color: #f0fff0;
-}
